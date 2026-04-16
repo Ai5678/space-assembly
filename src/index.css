@@ -57,15 +57,15 @@ p {
 .game-layout {
     grid-row: 3;
     display: grid;
-    grid-template-columns: minmax(120px, 19vw) minmax(320px, min(48vw, calc(64dvh * 0.953))) minmax(120px, 19vw);
-    align-items: center;
+    grid-template-columns: minmax(120px, 19vw) minmax(360px, min(60vw, calc(82dvh * 0.953))) minmax(120px, 19vw);
+    align-items: end;
     justify-content: center;
     gap: clamp(8px, 1.2vw, 20px);
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     min-height: 0;
-    align-self: start;
+    align-self: end;
   }
   
   .center-panel {
@@ -76,7 +76,7 @@ p {
     aspect-ratio: 724 / 760;
     width: 100%;
     max-width: none;
-    align-self: center;
+    align-self: end;
   }
 
 .page-layout > header {
@@ -105,7 +105,7 @@ p {
 
   .side-panel {
     position: relative;
-    background-color: rgba(15, 10, 40, 0.85);
+    background-color: rgba(15, 10, 40, 0.6);
     border-radius: 8px;
     padding: 16px;
     min-height: clamp(190px, 32vh, 330px);
