@@ -177,7 +177,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-block: 0 clamp(8px, 1vw, 16px);
   text-align: center;
 }
 
@@ -196,28 +195,28 @@ main {
 /* display screen — positioned over the cabinet's dark screen area */
 .screen-content {
   position: absolute;
-  top: 50%;
-  left: 17%;
-  right: 17%;
-  bottom: 20%;
+  top: 45%;
+  left: 20%;
+  right: 20%;
+  bottom: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
 
 /* Shrink keyboard buttons */
 .screen-content .keyboard-container {
-  gap: 4px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 20px;
 }
   
 .screen-content .keyboard-container button {
-  width: 26px;
-  height: 26px;
-  font-size: 0.6rem;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
 }
 
 /* letters */
@@ -248,10 +247,9 @@ main {
 .keyboard-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
     justify-content: center;
     max-width: 450px;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 }
 
 .keyboard-container button {
@@ -278,16 +276,19 @@ main {
 }
 /* new game button */
 .new-game{
-    font-family: inherit;
-    background-color: #11B5E5;
-    border: 1px solid #D7D7D7;
-    border-radius: 4px;
-    width: 225px;
-    height: 40px;
-    padding: 6px 12px;
-    display: block;
-    margin-inline: auto;
-    cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  background-color: #11B5E5;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
