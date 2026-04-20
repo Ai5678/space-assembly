@@ -33,7 +33,7 @@ export default function Status({isWin, isLose, isGameOver, farewellText}: GameSt
                     </>
                 )
             ) : (
-                farewellText
+                <p>{farewellText}</p>
             )
         }
     </section>
