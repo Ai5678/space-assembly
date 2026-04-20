@@ -2,21 +2,21 @@
     box-sizing: border-box;
 }
 
-.orbitron {
+/* .orbitron {
     font-family: "Orbitron", sans-serif;
     font-style: normal;
-  }
+  } */
 
 html, body, #root {
     width: 100%;
     min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: "Orbitron", sans-serif;
     color: #D9D9D9;
-    padding: 0;
 }
 
 .bg-image {
@@ -39,10 +39,6 @@ body {
 main {
     position: relative;
 }
-p {
-    font-size: 1.2rem;
-    color: #f9f4da
-}
 
 .page-layout {
     position: relative;
@@ -57,10 +53,10 @@ p {
 .game-layout {
     grid-row: 3;
     display: grid;
-    grid-template-columns: minmax(120px, 19vw) minmax(360px, min(60vw, calc(82dvh * 0.953))) minmax(120px, 19vw);
+    grid-template-columns: minmax(100px, 12vw) minmax(360px, min(60vw, calc(82dvh * 0.953))) minmax(100px, 12vw);
     align-items: end;
     justify-content: center;
-    gap: clamp(8px, 1.2vw, 20px);
+    gap: clamp(20px, 3vw, 48px);
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
@@ -108,14 +104,17 @@ p {
     background-color: rgba(15, 10, 40, 0.6);
     border-radius: 8px;
     padding: 16px;
-    min-height: clamp(190px, 32vh, 330px);
-    max-height: clamp(220px, 44vh, 380px);
+    /* min-height: clamp(190px, 32vh, 330px);
+    max-height: clamp(220px, 44vh, 380px); */
+    height: clamp(260px, 62vh, 500px);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     box-shadow: 0 0 8px #00f5ff, 0 0 20px rgba(0,245,255,0.25),
-                inset 0 0 10px rgba(255,0,204,0.1);
-    border: 2px solid #00f5ff;
+                inset 0 0 12px rgba(255,0,204,0.35);
+    border: 5px solid #00f5ff;
+    outline: 3px solid #FF00FF;
+outline-offset: -7px;
     align-self: center;
     width: 100%;
     overflow: hidden;
@@ -125,8 +124,8 @@ p {
   .coins-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(4px, 0.7vw, 10px);
-    padding: clamp(4px, 0.7vw, 8px);
+    gap: clamp(2px, 0.3vw, 5px);
+    padding: clamp(2px, 0.3vw, 4px);
     justify-items: center;
     align-content: space-evenly;
     height: 100%;
@@ -140,7 +139,7 @@ p {
     gap: clamp(2px, 0.4vw, 6px);
   }
   
-  .coin-right-col { margin-top: clamp(4px, 0.9vw, 12px); }
+  .coin-right-col { margin-top: clamp(2px, 0.3vw, 5px); }
   
   .coin-img {
     width: clamp(34px, 2.8vw, 56px);
@@ -155,18 +154,10 @@ p {
     opacity: 0.4;
   }
   
-  .coin-label {
-    font-size: 0.5rem;
-    color: #8080aa;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-  
 /* right panel */
 .monster-container {
-    flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     padding: clamp(4px, 0.6vw, 10px) 0 0;
   }
@@ -181,32 +172,36 @@ p {
   
   /* Status inside right panel needs no outer margin */
   .right-panel .status {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-block: 0 clamp(8px, 1vw, 16px);
-    font-size: clamp(0.7rem, 0.5vw + 0.5rem, 0.9rem);
+    font-size: clamp(0.85rem, 0.6vw + 0.6rem, 1.1rem);
     text-align: center;
   }
 
   .right-panel .status h2 {
     margin: 0;
-    font-size: clamp(0.85rem, 0.7vw + 0.4rem, 1.1rem);
+    font-size: clamp(1rem, 0.8vw + 0.6rem, 1.35rem);
   }
 
   .right-panel .status p {
     margin: 0.35rem 0 0;
-    font-size: clamp(0.68rem, 0.5vw + 0.42rem, 0.9rem);
+    font-size: clamp(0.8rem, 0.5vw + 0.55rem, 1rem);
   }
   
   /* display screen — positioned over the cabinet's dark screen area */
   .screen-content {
     position: absolute;
-    top: 39%;
+    top: 50%;
     left: 13%;
     right: 13%;
     bottom: 29%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     gap: 6px;
     overflow: hidden;
     z-index: 1;
