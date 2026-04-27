@@ -74,6 +74,11 @@ export default function AssemblyEndgame() {
                     {/* right panel */}
                     <RightPanel isWin={isWin} isLose={isLose} isGameOver={isGameOver} farewellText={farewellText}/>
                 </main>
+                <footer className="credits">
+                    <a href="https://www.flaticon.com/free-icons/coin" title="coin icons" target="_blank" rel="noreferrer">Coin icons by smashingstocks – Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/character" title="character icons" target="_blank" rel="noreferrer">Character icons by redempticon – Flaticon</a>
+                    <span>"Watercolor violet outer space background" by Freepik</span>
+                </footer>
             </div>
         </>
     )
