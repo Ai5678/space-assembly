@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Background from "./components/Background"
 import Header from "./components/Header"
@@ -34,6 +34,16 @@ export default function AssemblyEndgame() {
         if (isGameOver) return
         setGuessedLetters((current: string[]): string[] => current.includes(letter) ? current : [...current,letter])
     }
+    useEffect(() : (()=> void )=> {
+        function handleKeyDown(event: KeyboardEvent): void {
+            if (isGameOver) return
+            const letter: string = event.key.toUpperCase()
+            if (!letter.match(/^[A-Z]$/)) return
+            setGuessedLetters((current: string[]): string[] => current.includes(letter) ? current : [...current, letter])
+        }
+        window.addEventListener("keydown", handleKeyDown)
+        return () => window.removeEventListener("keydown", handleKeyDown)
+    }, [isGameOver])
 
     function resetGame(): void {
         setCurrentWord(getRandomWord())
