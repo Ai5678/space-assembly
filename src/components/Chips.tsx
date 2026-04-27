@@ -14,7 +14,7 @@ const coinVariants = {
         opacity: 1,
         y: 0,
         scale: 1,
-        transition: { delay: i * 0.07, type: "spring", stiffness: 260, damping: 18 },
+        transition: { delay: i * 0.07, type: "spring" as const, stiffness: 260, damping: 18 },
     }),
     lost: {
         x: [0, -8, 8, -6, 6, -3, 3, 0],

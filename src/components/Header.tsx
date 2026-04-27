@@ -23,7 +23,7 @@ export default function Header(): JSX.Element {
                         times: [0, 0.05, 0.08, 0.35, 0.37, 0.45],
                         repeat: Infinity,
                         repeatDelay: 2,
-                        ease: "steps(1, end)",
+                        ease: "steps(1, end)" as any,
                     }}
                 >
                     A
