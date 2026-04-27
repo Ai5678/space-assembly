@@ -1,6 +1,7 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react"
 import { loadSlim } from "@tsparticles/slim"
 import { useEffect, useState } from "react"
+import bgImage from "../../images/outer-space-background.jpg"
 
 export default function Background() {
   const [init, setInit] = useState(false)
@@ -12,7 +13,7 @@ export default function Background() {
 
   return (
     <>
-      <div className="bg-image" />
+      <div className="bg-image" style={{backgroundImage: `url(${bgImage})`}} />
       {init && (
         <Particles
           id="stars"
