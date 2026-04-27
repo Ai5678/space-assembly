@@ -205,40 +205,40 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 1;
 }
 
 /* Shrink keyboard buttons */
 .screen-content .keyboard-container {
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: clamp(3px, 0.5vw, 8px);
+  margin-bottom: clamp(8px, 1.5vh, 20px);
 }
-  
+
 .screen-content .keyboard-container button {
-  width: 35px;
-  height: 35px;
-  font-size: 1rem;
+  width: clamp(22px, 2.8vw, 35px);
+  height: clamp(22px, 2.8vw, 35px);
+  font-size: clamp(0.55rem, 0.8vw, 1rem);
 }
 
 /* letters */
 .letters-container {
     display: flex;
     justify-content: center;
-    gap: 5px;
-    margin-bottom: 20px;
+    gap: clamp(2px, 0.4vw, 5px);
+    margin-bottom: clamp(8px, 1.5vh, 20px);
 }
 
 .letter{
-    height: 45px;
-    width: 45px;
+    height: clamp(28px, 3.5vw, 45px);
+    width: clamp(28px, 3.5vw, 45px);
     background-color: #323232;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #f9f4da;
     color: #f9f4da;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 1.2vw, 1.25rem);
 }
 
 .letter.missed {
