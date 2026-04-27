@@ -209,16 +209,26 @@ main {
   z-index: 1;
 }
 
-/* Shrink keyboard buttons */
+.screen-content {
+  gap: 4px;
+}
+
 .screen-content .keyboard-container {
-  gap: clamp(3px, 0.5vw, 8px);
-  margin-bottom: clamp(8px, 1.5vh, 20px);
+  gap: clamp(2px, 0.4vw, 6px);
+  margin-bottom: clamp(4px, 1vh, 12px);
 }
 
 .screen-content .keyboard-container button {
-  width: clamp(22px, 2.8vw, 35px);
-  height: clamp(22px, 2.8vw, 35px);
-  font-size: clamp(0.55rem, 0.8vw, 1rem);
+  width: clamp(18px, 2.2vw, 28px);
+  height: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(0.5rem, 0.7vw, 0.85rem);
+}
+
+.screen-content .new-game {
+  width: clamp(100px, 15vw, 190px);
+  height: clamp(24px, 3vh, 34px);
+  font-size: clamp(0.5rem, 0.8vw, 0.9rem);
+  padding: 4px 8px;
 }
 
 /* letters */
@@ -226,7 +236,7 @@ main {
     display: flex;
     justify-content: center;
     gap: clamp(2px, 0.4vw, 5px);
-    margin-bottom: clamp(8px, 1.5vh, 20px);
+    margin-bottom: clamp(4px, 1vh, 12px);
 }
 
 .letter{
